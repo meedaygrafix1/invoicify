@@ -46,23 +46,36 @@ if (CSS.supports('transition-timing-function', 'linear(0, 1)')) {
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.nav-links');
+const mobileNavigation = matchMedia('(max-width: 640px)');
 const closeMenu = () => {
   menuToggle.setAttribute('aria-expanded', 'false');
   menuToggle.setAttribute('aria-label', 'Open navigation');
   navigation.classList.remove('is-open');
 };
-menuToggle.addEventListener('click', () => {
+menuToggle.addEventListener('click', (event) => {
   const open = menuToggle.getAttribute('aria-expanded') !== 'true';
   menuToggle.setAttribute('aria-expanded', String(open));
   menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
   navigation.classList.toggle('is-open', open);
+  if (open && event.detail === 0) navigation.querySelector('a, button').focus();
+});
+menuToggle.addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowDown') {
+    event.preventDefault();
+    if (menuToggle.getAttribute('aria-expanded') !== 'true') menuToggle.click();
+    navigation.querySelector('a, button').focus();
+  }
 });
 navigation.addEventListener('click', (event) => {
   if (event.target.closest('a, button')) closeMenu();
 });
-document.addEventListener('click', (event) => {
-  if (!event.target.closest('.navigation')) closeMenu();
+document.addEventListener('pointerdown', (event) => {
+  if (!navigation.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
 });
+document.addEventListener('focusin', (event) => {
+  if (!navigation.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
+});
+mobileNavigation.addEventListener('change', closeMenu);
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
     closeMenu();
@@ -71,6 +84,9 @@ document.addEventListener('keydown', (event) => {
 });
 
 const faq = document.querySelector('.faq-dialog');
+faq.addEventListener('close', () => {
+  if (mobileNavigation.matches && navigation.contains(document.activeElement)) menuToggle.focus();
+});
 document.querySelectorAll('[data-open-faq]').forEach((button) => button.addEventListener('click', () => faq.showModal()));
 faq.querySelector('.dialog-close').addEventListener('click', () => faq.close());
 faq.querySelector('[data-close-faq]').addEventListener('click', () => faq.close());
