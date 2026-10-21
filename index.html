@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3fdd8" />
+    <meta name="description" content="Never chase a payment again. Automated reminders, global payments, and real-time financial insights for your business." />
+    <title>Invoicify — Never chase a payment again</title>
+    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml" />
+    <link rel="preload" href="./assets/instrument-serif-regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./assets/instrument-serif-italic.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-landscape" aria-hidden="true"><img src="./assets/landscape.png" alt="" fetchpriority="high" /></div>
+        <div class="hero-wash" aria-hidden="true"></div>
+        <div class="hero-rails rails" aria-hidden="true"></div>
+        <header class="header">
+          <nav class="navigation rails" aria-label="Main navigation">
+            <a class="brand" href="./" aria-label="Invoicify home"><img src="./assets/logo.svg" alt="" /><span>Invoicify</span></a>
+            <div class="nav-links" id="nav-links">
+              <a href="#features">About us</a>
+              <a href="#pricing">Pricing</a>
+              <button class="text-button" type="button" data-open-faq>FAQ</button>
+            </div>
+            <a class="button nav-cta" href="#pricing" data-signup>Get Started</a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+          </nav>
+        </header>
+        <div class="hero-copy-row">
+          <div class="hero-copy rails">
+            <h1 id="hero-title">Never chase a<br /><em>payment</em> again.</h1>
+            <div class="hero-description">
+              <p>Stop wondering where your money is. Set up automated reminders, view instant financial health reports, and keep your business moving forward.</p>
+              <a class="button" href="#pricing" data-signup>Start free trial</a>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-area">
+          <button class="dashboard" type="button" aria-label="Preview the dashboard's layered hover effect" aria-pressed="false" aria-describedby="dashboard-description">
+            <span class="dashboard-layer dashboard-layer-back" aria-hidden="true"><span class="dashboard-plane"></span></span>
+            <span class="dashboard-layer dashboard-layer-middle" aria-hidden="true"><span class="dashboard-plane"></span></span>
+            <span class="dashboard-layer dashboard-layer-front"><span class="dashboard-plane"><img src="./assets/dashboard.png" alt="Invoicify invoice dashboard showing revenue, collected and pending payments, and invoice statuses." fetchpriority="high" /></span></span>
+          </button>
+          <span class="sr-only" id="dashboard-description">Hover or focus to reveal the layers beneath the dashboard. Tap or press Enter to toggle the effect.</span>
+        </div>
+      </section>
+      <div class="body-sections">
+        <div class="body-rails rails" aria-hidden="true"></div>
+        <section id="features" class="features" aria-labelledby="features-title">
+          <div class="section-heading">
+            <h2 id="features-title"><em>Everything</em> you need</h2>
+            <p>No fluff. Just tools to help you get your money.</p>
+          </div>
+          <div class="feature-cards rails">
+            <article class="feature-card reminder-card">
+              <h3>Auto-Reminders</h3>
+              <p>We politely (or firmly) nudge your clients so you don't have to. Never chase a late payment again.</p>
+            </article>
+            <article class="feature-card payment-card" id="integrations">
+              <h3>Global Payments</h3>
+              <p>Accept credit cards, ACH, and crypto. We handle the conversions and local taxes automatically.</p>
+            </article>
+            <article class="feature-card insights-card">
+              <h3>Real-time Insights</h3>
+              <p>See your financial health at a glance. Know exactly who owes what and your projected monthly cashflow.</p>
+            </article>
+          </div>
+        </section>
+        <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+          <div class="section-heading">
+            <h2 id="pricing-title"><em>Simple Pricing</em></h2>
+            <p>No hidden fees. No BS</p>
+          </div>
+          <div class="plans rails">
+            <article class="plan">
+              <h3>Starter</h3>
+              <p class="price"><strong>$10</strong><span>/ per month</span></p>
+              <a class="button button-outline" href="#get-started" data-signup data-plan="starter" aria-label="Get started with Starter">Get started</a>
+              <h4>Features</h4>
+              <ul>
+                <li><img src="./assets/check.svg" alt="" />3 Active Invoices</li>
+                <li><img src="./assets/check.svg" alt="" />Basic Templates</li>
+                <li><img src="./assets/check.svg" alt="" />Standard Support</li>
+              </ul>
+            </article>
+            <article class="plan plan-pro">
+              <div class="pro-backdrop" aria-hidden="true"><div class="pro-glow"><img src="./assets/pricing-glow.svg" alt="" /></div></div>
+              <div class="plan-label"><h3>Professional</h3><span class="popular">Popular</span></div>
+              <p class="price"><strong>$20</strong><span>/ per month</span></p>
+              <a class="button" href="#get-started" data-signup data-plan="professional" aria-label="Get started with Professional">Get started</a>
+              <h4>Features</h4>
+              <ul>
+                <li><img src="./assets/check-pro.svg" alt="" />Unlimited Invoices</li>
+                <li><img src="./assets/check-pro.svg" alt="" />Custom Branding</li>
+                <li><img src="./assets/check-pro.svg" alt="" />Automated Reminders</li>
+                <li><img src="./assets/check-pro.svg" alt="" />API Access</li>
+              </ul>
+            </article>
+            <article class="plan">
+              <h3>Agency</h3>
+              <p class="price"><strong>$40</strong><span>/ per month</span></p>
+              <a class="button button-outline" href="#get-started" data-signup data-plan="agency" aria-label="Get started with Agency">Get started</a>
+              <h4>Features</h4>
+              <ul>
+                <li><img src="./assets/check.svg" alt="" />Multiple Users</li>
+                <li><img src="./assets/check.svg" alt="" />Advanced Analytics</li>
+                <li><img src="./assets/check.svg" alt="" />Priority 24/7 Support</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+        <section class="closing" id="get-started" aria-labelledby="closing-title">
+          <h2 id="closing-title"><em>Ready to stop chasing<br />your money?</em></h2>
+          <p>Join thousands of creative professionals who have automated their financial admin. Your first 3 invoices are on us.</p>
+          <a class="button" href="#pricing" data-signup>Start free trial</a>
+        </section>
+        <footer class="footer rails">
+          <div class="footer-brand">
+            <a class="brand" href="./" aria-label="Invoicify home"><img src="./assets/logo.svg" alt="" /><span>Invoicify</span></a>
+            <img class="footer-star" src="./assets/footer-star.svg" alt="" loading="lazy" />
+          </div>
+          <div class="footer-column"><h3>Product</h3><a href="#features">Features</a><a href="#integrations">Integrations</a><span data-site-link="changelog" aria-disabled="true" title="Coming soon">Changelog</span></div>
+          <div class="footer-column"><h3>Company</h3><a href="#features">About</a><span data-site-link="terms" aria-disabled="true" title="Coming soon">Terms</span><span data-site-link="privacy" aria-disabled="true" title="Coming soon">Privacy</span></div>
+          <div class="footer-column"><h3>Follow us</h3><div class="socials"><span data-site-link="twitter" aria-label="Twitter — coming soon" aria-disabled="true"><img src="./assets/twitter.svg" alt="Twitter" /></span><span data-site-link="instagram" aria-label="Instagram — coming soon" aria-disabled="true"><img src="./assets/instagram.svg" alt="Instagram" /></span></div></div>
+        </footer>
+      </div>
+    </main>
+    <dialog class="faq-dialog" aria-labelledby="faq-title">
+      <button class="dialog-close" type="button" aria-label="Close frequently asked questions">×</button>
+      <h2 id="faq-title"><em>A few answers.</em></h2>
+      <details open><summary>How much does Invoicify cost?</summary><p>Starter is $10 per month, Professional is $20 per month, and Agency is $40 per month. No hidden fees.</p></details>
+      <details><summary>Can I try Invoicify?</summary><p>Your first 3 invoices are on us. Explore the plans to find the right fit for your business.</p></details>
+      <details><summary>Which plan includes automated reminders?</summary><p>The Professional plan includes unlimited invoices, custom branding, automated reminders, and API access.</p></details>
+      <a class="button" href="#pricing" data-close-faq>Explore pricing</a>
+    </dialog>
+  </body>
+</html>
